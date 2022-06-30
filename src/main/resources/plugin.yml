@@ -1,0 +1,34 @@
+name: MicLoSFurniture
+version: '${project.version}'
+main: net.syobonoon.plugin.miclosfurniture.MicLoSFurniture
+api-version: 1.15
+
+commands:
+  dainaif:
+    description: You can get a furniture.
+    permission: miclosfurniture.dainaif
+    permission-message: You don't have <permission>
+    usage: /<command> FurnitureName [amount]
+  dainaifreload:
+    description: You can reload MicLoSFurniture.
+    permission: miclosfurniture.dainaifreload
+    permission-message: You don't have <permission>
+    usage: /<command>
+  dp:
+    description: You can get admin catalog.
+    permission: miclosfurniture.dp
+    permission-message: You don't have <permission>
+    usage: /<command>
+
+permissions:
+  miclosfurniture.*:
+    children:
+      miclosfurniture.dainaif: true
+      miclosfurniture.reload: true
+      miclosfurniture.dp: true
+  miclosfurniture.dainaif:
+    default: op
+  miclosfurniture.reload:
+    default: op
+  miclosfurniture.dp:
+    default: op
